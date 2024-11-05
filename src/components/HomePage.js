@@ -57,33 +57,16 @@ const HomePage = () => {
 
     return (
         <div className={styles.container}>
+        
             <p className="day">
-                Phase de la lune d'aujourd'hui : {currentDate.toLocaleDateString()} <br />
-                Date sélectionnée : {selectedDate.toLocaleDateString()}
+             {currentDate.toLocaleDateString()} <br />
             </p>
-
-            <div className="calendar">
-                <label>Sélectionner une date :</label>
-                <DatePicker
-                    showIcon
-                    selected={selectedDate}
-                    onChange={handleDateChange}
-                    dateFormat="dd/MM/yyyy" 
-                />
-            </div>
 
             {/* Affichage de l'image de la phase sélectionnée */}
             <div className={styles.phaseContainer}>
+               
                 <img className={styles.phaseOfMoonImage} src={phaseImage} alt="Phase de la lune" />
-
-                <div className={styles.phaseContent}>
-                    <h2 className="h2">PHASE DE LA LUNE</h2>
-                    <p> Nom de la phase : {phaseDetails.title}</p>
-                    <p>Eclairage : {phaseDetails.eclairage}</p>
-                    <p>Age : {phaseDetails.age}</p>
-                    <p>Distance avec le soleil : {phaseDetails.distance}</p>
-                    <p>Sun distance : {phaseDetails.sun}</p>
-                </div>
+                <h3>{phaseDetails.title}</h3>
             </div>
         </div>
     );

@@ -12,12 +12,11 @@
   background-position: center;
 }
 
+
 .phaseContainer {
-  border: 2px rgb(117, 113, 113) solid;
-  display: flex;
+  margin: 20px;
+  text-align: center;
   align-items: center;
-  gap: 30px; /* Espace entre l'image et le contenu */
-  margin-top: 60px;
   border-radius: 20px;
   width: 100%; /* Prend toute la largeur disponible */
   max-width: 800px; /* Limite la largeur pour les grands écrans */
@@ -26,20 +25,28 @@
 }
 
 .phaseOfMoonImage {
-  width: 30%; /* Ajustez la taille de l'image selon vos besoins */
+  width: 50%; /* Ajustez la taille de l'image selon vos besoins */
   height: auto;
+  border-radius: 15px;
 }
 
 .phaseContent h2,
 .phaseContent h3,
 .phaseContent p {
   margin: 0; /* Supprime les marges */
-  padding: 2px 0; /* Un léger espacement vertical */
+  padding: 20px 0; /* Un léger espacement vertical */
+  opacity: 1;
+  
 }
+
+.phaseContent p {
+  color:rgb(254, 250, 249);
+  
+}
+
 /* Styles responsives */
 @media (max-width: 768px) {
   .phaseContainer {
-    flex-direction: column; 
     align-items: center; 
   }
   
