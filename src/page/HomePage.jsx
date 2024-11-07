@@ -4,7 +4,7 @@ import newMoon from "../asset/new-moon.png";
 import firstQuarter from "../asset/fisrt-quarter.png";
 import waningGibbous from "../asset/waning-gibbous.jpg";
 import waxingGibbous from "../asset/waxing-gibbous.png";
-import waxingCrescent from "../asset/fisrt-quarter.png";
+import waxingCrescent from "../asset/waxing-crescent.png";
 import waningCrescent from "../asset/waning-crescent.png";
 import lastQuarter from "../asset/last-quarter.jpg";
 import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
@@ -13,8 +13,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function HomePage() {
-  const [phase, setPhase] = useState("Full moon");
-  const [img, setImg] = useState(firstQuarter);
+  const [phase, setPhase] = useState("");
+  const [img, setImg] = useState(null);
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const moonPhaseImages = {
