@@ -11,6 +11,7 @@ import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
 import DayView from "../component/DayView";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import styles from "./HomePage.module.css";
 
 const moonPhaseImages = {
   "New moon": newMoon,
@@ -40,36 +41,43 @@ function HomePage() {
   }, [currentDate]); // Le useEffect s'exécute chaque fois que currentDate change
 
   return (
-    <div>
-      <div className="text-red-50">
+    <div className="flex flex-col items-center  p-6 text-white">
+      <h1 className="text-2xl font-bold text-indigo-200 mb-4">
+        Phases de la Lune:
+      </h1>
+      <div className="w-full max-w-md">
         <DatePicker
+          showIcon
+          className="w-full py-2 px-4 bg-gray-700 text-white placeholder-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
           dateFormat="dd/MM/yyyy"
           selected={currentDate}
           onChange={handleDateChange}
-          className="w-full max-w-xs p-4 border-2 border-gray-300 bg-transparent text-white rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          // customInput={<div className={styles.customDatepickerIcon} />}
           wrapperClassName="w-full"
-          calendarClassName="bg-gray-800 p-4 rounded-lg shadow-xl text-white"
+          calendarClassName="bg-gray-800 p-4 rounded-lg shadow-xl"
           monthClassName="text-center text-lg font-semibold text-indigo-400"
-          dayClassName={(date) =>
-            "text-white hover:bg-indigo-600 hover:text-white"
-          }
           showMonthDropdown
           showYearDropdown
           dropdownMode="select"
-          popperPlacement="right-start" // Le calendrier s'affiche à droite du champ
+          popperPlacement="right-start"
           popperConfig={{
             modifiers: [
               {
                 name: "offset",
                 options: {
-                  offset: [10, 0], // Décalage à droite
+                  offset: [10, 0],
                 },
               },
             ],
           }}
         />
       </div>
-      <DayView date={currentDate} imageUrl={img} title={phase} />
+      <DayView
+        date={currentDate}
+        imageUrl={img}
+        title={phase}
+        className="mt-6 text-center p-4 bg-gray-800 rounded-lg shadow-md transition hover:shadow-lg hover:bg-gray-700"
+      />
     </div>
   );
 }
