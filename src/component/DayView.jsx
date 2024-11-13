@@ -3,8 +3,13 @@ import React from "react";
 function DayView({ date, imageUrl, title }) {
   return (
     <div className="max-w-sm mx-auto mt-10 p-4 ">
-      <img src={imageUrl} alt={title} className="w-full" loading="lazy" />
-      <h1 className="text-4xl font-semibold text-blue-300 text-center">
+      <img
+        src={imageUrl}
+        alt={title}
+        className="rounded-full border-spacing-52 border-8 border-emerald-950"
+        loading="lazy"
+      />
+      <h1 className=" mt-10 text-4xl font-semibold text-yellow-200 text-center opacity-50">
         {title}
       </h1>
     </div>

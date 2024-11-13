@@ -26,50 +26,62 @@ const moonPhaseImages = {
 function HomePage() {
   const [phase, setPhase] = useState("");
   const [img, setImg] = useState(null);
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [selectDate, setselectDate] = useState(new Date());
 
   const handleDateChange = (date) => {
-    setCurrentDate(date); // Mettre à jour la date sélectionnée
+    setselectDate(date); // Mettre à jour la date sélectionnée
   };
 
   // Effectuer un calcul de la phase à chaque fois que la date change
   useEffect(() => {
-    const currentPhase = calculateMoonPhaseByDate(currentDate); // Calculer la phase de la lune actuelle
+    const currentPhase = calculateMoonPhaseByDate(selectDate); // Calculer la phase de la lune actuelle
     setPhase(currentPhase); // Mettre à jour l'état avec la phase de la lune
     setImg(moonPhaseImages[currentPhase]); // Mettre à jour l'état avec l'image de la lune correspondant à la phase
-  }, [currentDate]); // Le useEffect s'exécute chaque fois que currentDate change
+  }, [selectDate]); // Le useEffect s'exécute chaque fois que selectDate change
 
   return (
-    <div>
-      <div className="text-red-50">
+    <div className="flex flex-col  text-white">
+      <div className="relative flex justify-center items-center ml-20 ">
+        <div className="mr-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            className="w-6 h-6 text-zinc-500"
+          >
+            <path d="M19 3h-1V2a1 1 0 10-2 0v1H8V2a1 1 0 10-2 0v1H5a2 2 0 00-2 2v15a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 17H5V9h14v11zM7 11h5v5H7v-5z"></path>
+          </svg>
+        </div>
+
         <DatePicker
-          dateFormat="dd/MM/yyyy"
-          selected={currentDate}
+          selected={selectDate}
           onChange={handleDateChange}
-          className="w-full max-w-xs p-4 border-2 border-gray-300 bg-transparent text-white rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          wrapperClassName="w-full"
-          calendarClassName="bg-gray-800 p-4 rounded-lg shadow-xl text-white"
+          className="bg-transparent  text-stone-400 placeholder-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-300 transition"
+          dateFormat="dd/MM/yyyy"
+          calendarClassName="bg-gray-800 rounded-lg shadow-xl"
           monthClassName="text-center text-lg font-semibold text-indigo-400"
-          dayClassName={(date) =>
-            "text-white hover:bg-indigo-600 hover:text-white"
-          }
           showMonthDropdown
           showYearDropdown
           dropdownMode="select"
-          popperPlacement="right-start" // Le calendrier s'affiche à droite du champ
           popperConfig={{
             modifiers: [
               {
                 name: "offset",
                 options: {
-                  offset: [10, 0], // Décalage à droite
+                  offset: [10, 0],
                 },
               },
             ],
           }}
         />
       </div>
-      <DayView date={currentDate} imageUrl={img} title={phase} />
+
+      <DayView
+        date={selectDate}
+        imageUrl={img}
+        title={phase}
+        className="mt-6 text-center p-4 bg-gray-800 rounded-lg shadow-md transition hover:shadow-lg hover:bg-gray-700"
+      />
     </div>
   );
 }
