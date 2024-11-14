@@ -70,6 +70,7 @@ function HomePage() {
                 name: "offset",
                 options: {
                   offset: [10, 0],
+                  offset: [10, 0],
                 },
               },
             ],
