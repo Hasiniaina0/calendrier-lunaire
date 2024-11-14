@@ -1,4 +1,4 @@
-import { calculateMoonPhaseByDate } from "../../src/application/MoonPhaseCalculator.js";
+import { calculateMoonPhaseByDate } from "./MoonPhaseCalculator.js";
 
 describe("calculateMoonPhaseByDate", () => {
   it("should return new-moon for a new moon date", () => {
