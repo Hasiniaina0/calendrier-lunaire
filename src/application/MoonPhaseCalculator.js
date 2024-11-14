@@ -11,20 +11,20 @@ export const calculateMoonPhaseByDate = (date) => {
 
   // Determine the moon phase
   if (phase < 0.03 || phase > 0.97) {
-    return "New moon";
+    return "new-moon";
   } else if (phase >= 0.03 && phase < 0.22) {
-    return "Waxing crescent";
+    return "waxing-crescent";
   } else if (phase >= 0.22 && phase < 0.28) {
-    return "First quarter";
+    return "first-quarter";
   } else if (phase >= 0.28 && phase < 0.47) {
-    return "Waxing gibbous";
+    return "waxing-gibbous";
   } else if (phase >= 0.47 && phase < 0.53) {
-    return "Full moon";
+    return "full-moon";
   } else if (phase >= 0.53 && phase < 0.72) {
-    return "Waning gibbous";
+    return "waning-gibbous";
   } else if (phase >= 0.72 && phase < 0.78) {
-    return "Last quarter";
+    return "last-quarter";
   } else {
-    return "Waning crescent";
+    return "waning-crescent";
   }
 };

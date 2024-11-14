@@ -14,14 +14,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const moonPhaseImages = {
-  "New moon": newMoon,
-  "Waxing crescent": waxingCrescent,
-  "First quarter": firstQuarter,
-  "Waxing gibbous": waxingGibbous,
-  "Full moon": fullMoon,
-  "Waning gibbous": waningGibbous,
-  "Last quarter": lastQuarter,
-  "Waning crescent": waningCrescent,
+  "new-moon": newMoon,
+  "waxing-crescent": waxingCrescent,
+  "first-quarter": firstQuarter,
+  "waxing-gibbous": waxingGibbous,
+  "full-moon": fullMoon,
+  "waning-gibbous": waningGibbous,
+  "last-quarter": lastQuarter,
+  "waning-crescent": waningCrescent,
 };
 
 function HomePage() {
@@ -43,7 +43,7 @@ function HomePage() {
   return (
     <div className="flex flex-col  text-white">
       <div className="relative flex justify-center items-center ml-20 ">
-        <div className="mr-3">
+        <div className="mr-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -57,7 +57,7 @@ function HomePage() {
         <DatePicker
           selected={selectDate}
           onChange={handleDateChange}
-          className="bg-transparent  text-stone-400 placeholder-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-300 transition"
+          className="bg-transparent  text-stone-400 "
           dateFormat="dd/MM/yyyy"
           calendarClassName="bg-gray-800 rounded-lg shadow-xl"
           monthClassName="text-center text-lg font-semibold text-indigo-400"
