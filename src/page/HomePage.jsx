@@ -11,6 +11,7 @@ import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
 import DayView from "../component/DayView";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const moonPhaseImages = {
   "New moon": newMoon,
@@ -81,7 +82,14 @@ function HomePage() {
         imageUrl={img}
         title={phase}
         className="mt-6 text-center p-4 bg-gray-800 rounded-lg shadow-md transition hover:shadow-lg hover:bg-gray-700"
-      />
+      >
+        <LazyLoadImage
+          src={img}
+          alt={phase}
+          placeholderSrc="Phase de la lune"
+          className="rounded-lg"
+        />
+      </DayView>
     </div>
   );
 }
