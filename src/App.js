@@ -1,5 +1,4 @@
 import "./App.css";
-import React from "react";
 import HomePage from "./page/HomePage";
 import fondImage from "./asset/fond.jpg";
 
