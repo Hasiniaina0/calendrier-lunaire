@@ -1,6 +1,6 @@
-import React from "react";
+import PropTypes from "prop-types";
 
-function DayView({ date, imageUrl, title }) {
+function DayView({ imageUrl, title }) {
   return (
     <div className="max-w-sm mx-auto mt-10 p-4 ">
       <img
@@ -14,5 +14,10 @@ function DayView({ date, imageUrl, title }) {
     </div>
   );
 }
+
+DayView.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string,
+};
 
 export default DayView;

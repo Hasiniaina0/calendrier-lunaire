@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import fullMoon from "../asset/full-moon.png";
 import newMoon from "../asset/new-moon.png";
 import firstQuarter from "../asset/first-quarter.png";
@@ -69,7 +69,6 @@ function HomePage() {
               {
                 name: "offset",
                 options: {
-                  offset: [10, 0],
                   offset: [10, 0],
                 },
               },
