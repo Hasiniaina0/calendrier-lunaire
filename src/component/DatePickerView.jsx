@@ -14,6 +14,7 @@ const DatePickerView = ({ selectDate, handleDateChange }) => {
         monthClassName="text-center text-lg font-semibold text-indigo-400"
         showMonthDropdown
         showYearDropdown
+        disabledKeyboardNavigation
         dropdownMode="select"
         popperConfig={{
           modifiers: [
