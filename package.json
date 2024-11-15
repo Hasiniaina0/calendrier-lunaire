@@ -11,6 +11,7 @@
     "calendrier-lunaire": "file:",
     "eslint": "^9.14.0",
     "eslint-plugin-jest": "^28.9.0",
+    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-datepicker": "^7.5.0",
     "react-dom": "^18.3.1",
@@ -25,7 +26,9 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "prepare": "husky"
+    "prepare": "husky",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,5 +60,6 @@
       "eslint",
       "npm test -- --findRelatedTests"
     ]
-  }
+  },
+  "homepage": "https://hasiniaina0.github.io/calendrier-lunaire/"
 }
