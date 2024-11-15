@@ -8,23 +8,16 @@ const DatePickerView = ({ selectDate, handleDateChange }) => {
       <DatePicker
         selected={selectDate}
         onChange={handleDateChange}
-        className="bg-transparent  text-stone-400 "
+        className="bg-transparent  text-stone-400 focus:outline-none"
         dateFormat="dd/MM/yyyy"
         calendarClassName="bg-gray-800 rounded-lg shadow-xl"
         monthClassName="text-center text-lg font-semibold text-indigo-400"
         showMonthDropdown
         showYearDropdown
+        popperPlacement="bottom-start"
+        onFocus={(e) => (e.target.readOnly = true)}
         dropdownMode="select"
-        popperConfig={{
-          modifiers: [
-            {
-              name: "offset",
-              options: {
-                offset: [10, 0],
-              },
-            },
-          ],
-        }}
+        portalId="root"
       />
     </div>
   );
