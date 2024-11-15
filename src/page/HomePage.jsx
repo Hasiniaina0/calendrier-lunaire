@@ -9,9 +9,8 @@ import waningCrescent from "../asset/waning-crescent.png";
 import lastQuarter from "../asset/last-quarter.png";
 import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
 import DayView from "../component/DayView";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import DatePickerView from "../component/DatePickerView";
 
 const moonPhaseImages = {
   "new-moon": newMoon,
@@ -53,27 +52,9 @@ function HomePage() {
             <path d="M19 3h-1V2a1 1 0 10-2 0v1H8V2a1 1 0 10-2 0v1H5a2 2 0 00-2 2v15a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 17H5V9h14v11zM7 11h5v5H7v-5z"></path>
           </svg>
         </div>
-
-        <DatePicker
-          selected={selectDate}
-          onChange={handleDateChange}
-          className="bg-transparent  text-stone-400 "
-          dateFormat="dd/MM/yyyy"
-          calendarClassName="bg-gray-800 rounded-lg shadow-xl"
-          monthClassName="text-center text-lg font-semibold text-indigo-400"
-          showMonthDropdown
-          showYearDropdown
-          dropdownMode="select"
-          popperConfig={{
-            modifiers: [
-              {
-                name: "offset",
-                options: {
-                  offset: [10, 0],
-                },
-              },
-            ],
-          }}
+        <DatePickerView
+          selectDate={selectDate}
+          handleDateChange={handleDateChange}
         />
       </div>
 
