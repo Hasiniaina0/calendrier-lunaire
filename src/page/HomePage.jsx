@@ -10,7 +10,7 @@ import lastQuarter from "../asset/last-quarter.png";
 import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
 import DayView from "../component/DayView";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import DatePickerView from "../component/DatePickerView";
+import DateSelectorView from "../component/DateSelectorView";
 
 const moonPhaseImages = {
   "new-moon": newMoon,
@@ -26,18 +26,18 @@ const moonPhaseImages = {
 function HomePage() {
   const [phase, setPhase] = useState("");
   const [img, setImg] = useState(null);
-  const [selectDate, setselectDate] = useState(new Date());
+  const [selectedDate, setselectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
-    setselectDate(date); // Mettre à jour la date sélectionnée
+    setselectedDate(date); // Mettre à jour la date sélectionnée
   };
 
   // Effectuer un calcul de la phase à chaque fois que la date change
   useEffect(() => {
-    const currentPhase = calculateMoonPhaseByDate(selectDate); // Calculer la phase de la lune actuelle
+    const currentPhase = calculateMoonPhaseByDate(selectedDate); // Calculer la phase de la lune actuelle
     setPhase(currentPhase); // Mettre à jour l'état avec la phase de la lune
     setImg(moonPhaseImages[currentPhase]); // Mettre à jour l'état avec l'image de la lune correspondant à la phase
-  }, [selectDate]); // Le useEffect s'exécute chaque fois que selectDate change
+  }, [selectedDate]); // Le useEffect s'exécute chaque fois que selectedDate change
 
   return (
     <div className="flex flex-col  text-white">
@@ -52,14 +52,14 @@ function HomePage() {
             <path d="M19 3h-1V2a1 1 0 10-2 0v1H8V2a1 1 0 10-2 0v1H5a2 2 0 00-2 2v15a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 17H5V9h14v11zM7 11h5v5H7v-5z"></path>
           </svg>
         </div>
-        <DatePickerView
-          selectDate={selectDate}
+        <DateSelectorView
+          selectedDate={selectedDate}
           handleDateChange={handleDateChange}
         />
       </div>
 
       <DayView
-        date={selectDate}
+        date={selectedDate}
         imageUrl={img}
         title={phase}
         className="mt-6 text-center p-4 bg-gray-800 rounded-lg shadow-md transition hover:shadow-lg hover:bg-gray-700"
