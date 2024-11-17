@@ -2,11 +2,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import PropTypes from "prop-types";
 
-const DatePickerView = ({ selectDate, handleDateChange }) => {
+const DateSelectorView = ({ selectedDate, handleDateChange }) => {
   return (
     <div className=" text-white">
       <DatePicker
-        selected={selectDate}
+        selected={selectedDate}
         onChange={handleDateChange}
         className="bg-transparent  text-stone-400 focus:outline-none "
         dateFormat="dd/MM/yyyy"
@@ -23,9 +23,9 @@ const DatePickerView = ({ selectDate, handleDateChange }) => {
   );
 };
 
-DatePickerView.propTypes = {
-  selectDate: PropTypes.dateFormat,
-  handleDateChange: PropTypes.dateFormat,
+DateSelectorView.propTypes = {
+  selectedDate: PropTypes.instanceOf(Date),
+  handleDateChange: PropTypes.func,
 };
 
-export default DatePickerView;
+export default DateSelectorView;
