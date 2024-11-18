@@ -35,10 +35,8 @@ const moonPhaseTitles = new Map([
 ]);
 
 function HomePage() {
-  // const [phase, setPhase] = useState("");
   const [img, setImg] = useState(null);
   const [selectedDate, setselectedDate] = useState(new Date());
-  const [title, setTitle] = useState("");
   const [phase, setPhase] = useState("");
 
   const handleDateChange = (date) => {
@@ -48,9 +46,8 @@ function HomePage() {
   // Effectuer un calcul de la phase à chaque fois que la date change
   useEffect(() => {
     const currentPhase = calculateMoonPhaseByDate(selectedDate); // Calculer la phase de la lune actuelle
-    setPhase(currentPhase); // Mettre à jour l'état avec la phase
     setImg(moonPhaseImages[currentPhase]); // Mettre à jour l'état avec l'image de la lune correspondant à la phase
-    setTitle(moonPhaseTitles.get(currentPhase)); // Mettre à jour le titre en français
+    setPhase(moonPhaseTitles.get(currentPhase)); // Mettre à jour le titre en français
   }, [selectedDate]); // Le useEffect s'exécute chaque fois que selectedDate change
 
   return (
@@ -75,8 +72,7 @@ function HomePage() {
       <DayView
         date={selectedDate}
         imageUrl={img}
-        title={title}
-        phase={phase}
+        title={phase}
         className="mt-6 text-center p-4 bg-gray-800 rounded-lg shadow-md transition hover:shadow-lg hover:bg-gray-700"
       />
     </div>
