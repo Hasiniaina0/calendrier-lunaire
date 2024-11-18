@@ -9,7 +9,7 @@ import waningCrescent from "../asset/waning-crescent.png";
 import lastQuarter from "../asset/last-quarter.png";
 import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
 import DayView from "../component/DayView";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import DateSelectorView from "../component/DateSelectorView";
 
 const moonPhaseImages = {
@@ -23,10 +23,23 @@ const moonPhaseImages = {
   "waning-crescent": waningCrescent,
 };
 
+const moonPhaseTitles = new Map([
+  ["new-moon", "Nouvelle lune"],
+  ["waxing-crescent", "Premier croissant"],
+  ["first-quarter", "Premier quartier"],
+  ["waxing-gibbous", "Gibbeuse croissante"],
+  ["full-moon", "Pleine lune"],
+  ["waning-gibbous", "Gibbeuse décroissante"],
+  ["last-quarter", "Dernier quartier"],
+  ["waning-crescent", "Dernier croissant"],
+]);
+
 function HomePage() {
-  const [phase, setPhase] = useState("");
+  // const [phase, setPhase] = useState("");
   const [img, setImg] = useState(null);
   const [selectedDate, setselectedDate] = useState(new Date());
+  const [title, setTitle] = useState("");
+  const [phase, setPhase] = useState("");
 
   const handleDateChange = (date) => {
     setselectedDate(date); // Mettre à jour la date sélectionnée
@@ -35,8 +48,9 @@ function HomePage() {
   // Effectuer un calcul de la phase à chaque fois que la date change
   useEffect(() => {
     const currentPhase = calculateMoonPhaseByDate(selectedDate); // Calculer la phase de la lune actuelle
-    setPhase(currentPhase); // Mettre à jour l'état avec la phase de la lune
+    setPhase(currentPhase); // Mettre à jour l'état avec la phase
     setImg(moonPhaseImages[currentPhase]); // Mettre à jour l'état avec l'image de la lune correspondant à la phase
+    setTitle(moonPhaseTitles.get(currentPhase)); // Mettre à jour le titre en français
   }, [selectedDate]); // Le useEffect s'exécute chaque fois que selectedDate change
 
   return (
@@ -61,16 +75,10 @@ function HomePage() {
       <DayView
         date={selectedDate}
         imageUrl={img}
-        title={phase}
+        title={title}
+        phase={phase}
         className="mt-6 text-center p-4 bg-gray-800 rounded-lg shadow-md transition hover:shadow-lg hover:bg-gray-700"
-      >
-        <LazyLoadImage
-          src={img}
-          alt={phase}
-          placeholderSrc="Phase de la lune"
-          className="rounded-lg"
-        />
-      </DayView>
+      />
     </div>
   );
 }

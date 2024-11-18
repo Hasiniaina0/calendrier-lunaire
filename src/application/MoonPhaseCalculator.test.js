@@ -45,3 +45,27 @@ describe("calculateMoonPhaseByDate", () => {
     );
   });
 });
+
+describe("moonPhaseTitles", () => {
+  const moonPhaseTitles = new Map([
+    ["new-moon", "Nouvelle lune"],
+    ["waxing-crescent", "Premier croissant"],
+    ["first-quarter", "Premier quartier"],
+    ["waxing-gibbous", "Gibbeuse croissante"],
+    ["full-moon", "Pleine lune"],
+    ["waning-gibbous", "Gibbeuse décroissante"],
+    ["last-quarter", "Dernier quartier"],
+    ["waning-crescent", "Dernier croissant"],
+  ]);
+
+  it("should return the correct French title for each moon phase", () => {
+    expect(moonPhaseTitles.get("new-moon")).toBe("Nouvelle lune");
+    expect(moonPhaseTitles.get("waxing-crescent")).toBe("Premier croissant");
+    expect(moonPhaseTitles.get("first-quarter")).toBe("Premier quartier");
+    expect(moonPhaseTitles.get("waxing-gibbous")).toBe("Gibbeuse croissante");
+    expect(moonPhaseTitles.get("full-moon")).toBe("Pleine lune");
+    expect(moonPhaseTitles.get("waning-gibbous")).toBe("Gibbeuse décroissante");
+    expect(moonPhaseTitles.get("last-quarter")).toBe("Dernier quartier");
+    expect(moonPhaseTitles.get("waning-crescent")).toBe("Dernier croissant");
+  });
+});
