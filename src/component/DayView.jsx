@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function DayView({ imageUrl, title }) {
   return (
-    <div className="max-w-md mx-auto mt-10 p-4 ">
+    <div className="max-w-md mx-auto mt-10 p-4 " data-testid="day-view">
       <LazyLoadImage
         src={imageUrl}
         alt={title}
