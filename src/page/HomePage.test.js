@@ -1,8 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import HomePage from "./HomePage";
+import { BrowserRouter } from "react-router-dom";
 
 it("render the page correctly and display the default image and title", () => {
-  render(<HomePage />);
+  render(
+    <BrowserRouter>
+      <HomePage />
+    </BrowserRouter>
+  );
 
   // Vérifier que le titre "Dernier croissant" est affiché selon la phase calculée pour la date par défaut
   expect(screen.getByText(/Dernier croissant/i)).toBeInTheDocument();
@@ -14,7 +19,11 @@ it("render the page correctly and display the default image and title", () => {
 });
 
 it("display the correct phase after calculating the moon phase for the default date", () => {
-  render(<HomePage />);
+  render(
+    <BrowserRouter>
+      <HomePage />
+    </BrowserRouter>
+  );
 
   // Vérifier que l'image correspond à la phase "Dernier croissant" pour la date par défaut
   const image = screen.getByAltText(/Dernier croissant/i);

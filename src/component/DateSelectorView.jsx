@@ -15,7 +15,7 @@ const DateSelectorView = ({ selectedDate, handleDateChange }) => {
   };
 
   return (
-    <div className="flex items-center space-x-2 text-white ">
+    <div className="flex items-center justify-center space-x-2 text-white mt-11">
       <div onClick={handleIconClick} className="cursor-pointer">
         <svg
           aria-label="Calendar icon"
@@ -38,10 +38,12 @@ const DateSelectorView = ({ selectedDate, handleDateChange }) => {
         monthClassName="text-center text-lg font-semibold text-indigo-400"
         showMonthDropdown
         showYearDropdown
+        popperClassName="custom-popper"
         onFocus={(e) => (e.target.readOnly = true)}
         dropdownMode="select"
         portalId="root"
         popperPlacement="bottom-end"
+        style={{ marginLeft: 0 }}
       />
     </div>
   );
