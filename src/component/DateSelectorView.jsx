@@ -15,7 +15,7 @@ const DateSelectorView = ({ selectedDate, handleDateChange }) => {
   };
 
   return (
-    <div className="flex items-center justify-center space-x-2 text-white mt-11">
+    <div className="flex items-center justify-center space-x-2 text-white ">
       <div onClick={handleIconClick} className="cursor-pointer">
         <svg
           aria-label="Calendar icon"
