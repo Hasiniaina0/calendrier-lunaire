@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+
+.days,
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  width: 14.28%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.cell {
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.number {
+  font-size: 18px;
+  font-weight: bold;
+}
