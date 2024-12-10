@@ -17,7 +17,7 @@ const Menu = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="bg-transparent from-teal-800 via-teal-700 to-teal-900 rounded-lg opacity-95 text-lg text-gray-200 mx-auto w-full shadow-xl fixed top-0 left-0 z-50">
+    <nav className="bg-transparent from-teal-800 via-teal-700 to-teal-900 rounded-lg opacity-95 text-lg text-gray-200 mx-auto w-full shadow-xl fixed top-0 left-0 z-50 ">
       <div className="container mx-auto px-12 py-3 flex items-center justify-center">
         <div className="flex space-x-1">
           {/* Lien Jour */}
