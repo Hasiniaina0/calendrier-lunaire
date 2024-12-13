@@ -87,8 +87,9 @@ const MoonPhaseCalendar = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-transparent rounded-lg shadow-md mt-10">
-      <div className="flex justify-between items-center mb-4">
+    <div className="static max-w-4xl mx-auto p-4 bg-transparent rounded-lg shadow-md mt-10">
+      <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md"></div>
+      <div className=" static flex justify-between items-center mb-4">
         <button
           onClick={handlePrevMonth}
           className="p-2 bg-white text-black rounded hover:bg-slate-200"
@@ -103,7 +104,7 @@ const MoonPhaseCalendar = () => {
         </h2>
         <button
           onClick={handleNextMonth}
-          className="p-2 bg-white text-black rounded hover:bg-slate-200"
+          className="p-2 pr-5 pl-5 bg-white text-black rounded hover:bg-slate-200"
         >
           Suivant
         </button>
@@ -133,13 +134,13 @@ const MoonPhaseCalendar = () => {
           return (
             <div
               key={date.toISOString()}
-              className="border border-x-amber-200 rounded p-2 bg-transparent relative flex flex-col items-start"
+              className="border border-x-amber-200 rounded p-2 bg-transparent relative flex flex-col items-end 2"
             >
-              <div className="text-sm font-semibold mb-1 text-white">
+              <div className="text-sm font-semibold mb-2 text-white">
                 {date.getDate()} {/* Affichage du jour du mois */}
               </div>
               <div
-                className="ml-auto w-12 h-12 flex self-end"
+                className="ml-auto w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 flex self-end px-1 sm:px-2"
                 title={moonPhaseTitle}
               >
                 <img

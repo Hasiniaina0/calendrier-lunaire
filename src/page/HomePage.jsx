@@ -54,7 +54,7 @@ function HomePage() {
     <div>
       <Menu />
       <div className="flex flex-col items-center justitfy-center text-white ">
-        <div className="relative flex justify-center items-center ml-20">
+        <div className="relative flex justify-center items-center">
           <DateSelectorView
             selectedDate={selectedDate}
             handleDateChange={handleDateChange}
