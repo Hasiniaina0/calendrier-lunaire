@@ -57,5 +57,5 @@
       "npm test -- --findRelatedTests"
     ]
   },
-  "homepage": "https://hasiniaina0.github.io/calendrier-lunaire/"
+  "homepage": "./"
 }
