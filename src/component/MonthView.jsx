@@ -1,13 +1,15 @@
 import { useState, useMemo } from "react";
-import fullMoon from "../asset/full-moon.png";
-import newMoon from "../asset/new-moon.png";
-import firstQuarter from "../asset/first-quarter.png";
-import waningGibbous from "../asset/waning-gibbous.png";
-import waxingGibbous from "../asset/waxing-gibbous.png";
-import waxingCrescent from "../asset/waxing-crescent.png";
-import waningCrescent from "../asset/waning-crescent.png";
-import lastQuarter from "../asset/last-quarter.png";
+import fullMoon from "../asset/f-moon.png";
+import newMoon from "../asset/n-moon.png";
+import firstQuarter from "../asset/f-quarter.png";
+import waningGibbous from "../asset/wan-gibbous.png";
+import waxingGibbous from "../asset/wax-gibbous.png";
+import waxingCrescent from "../asset/wax-crescent.png";
+import waningCrescent from "../asset/wan-crescent.png";
+import lastQuarter from "../asset/last-quart.png";
 import { calculateMoonPhaseByDate } from "../application/MoonPhaseCalculator";
+import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const moonPhaseImages = {
   "new-moon": newMoon,
@@ -31,7 +33,7 @@ const moonPhaseTitles = {
   "waning-crescent": "Dernier croissant",
 };
 
-const MoonPhaseCalendar = () => {
+const MonthView = () => {
   // Déclaration de l'état pour le mois actuel
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
@@ -87,31 +89,28 @@ const MoonPhaseCalendar = () => {
   };
 
   return (
-    <div className="static max-w-4xl mx-auto p-4 bg-transparent rounded-lg shadow-md mt-10">
+    <div className="static max-w-6xl mx-auto p-4 bg-transparent rounded-lg shadow-md mt-30">
       <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md"></div>
       <div className=" static flex justify-between items-center mb-4">
-        <button
+        <MdOutlineKeyboardDoubleArrowLeft
           onClick={handlePrevMonth}
-          className="p-2 bg-white text-black rounded hover:bg-slate-200"
-        >
-          Précédent
-        </button>
+          className="text-4xl text-white  hover:text-gray-400"
+        />
+
         <h2 className="text-2xl font-bold">
           {currentMonth.toLocaleString("default", {
             month: "long",
             year: "numeric",
           })}
         </h2>
-        <button
+        <MdOutlineKeyboardDoubleArrowRight
           onClick={handleNextMonth}
-          className="p-2 pr-5 pl-5 bg-white text-black rounded hover:bg-slate-200"
-        >
-          Suivant
-        </button>
+          className="text-4xl text-white  hover:text-gray-400"
+        />
       </div>
 
       {/* Calendar Grid */}
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-7 gap-4">
         {/* Weekday Headers */}
         {["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"].map((day) => (
           <div key={day} className="font-bold text-gray-300 p-2 text-center">
@@ -122,32 +121,26 @@ const MoonPhaseCalendar = () => {
         {/* Calendar Days */}
         {calendarDays.map((date, index) => {
           if (date === null) {
-            return (
-              <div key={`empty-${index}`} className="bg-transparent"></div>
-            );
+            return <div key={`empty-${index}`}></div>;
           }
 
           const moonPhaseKey = calculateMoonPhaseByDate(date);
-          const moonPhaseTitle = moonPhaseTitles[moonPhaseKey]; // Récupère le titre de la phase lunaire
+
           const moonPhaseImage = moonPhaseImages[moonPhaseKey]; // Récupère l'image de la phase lunaire
 
           return (
             <div
               key={date.toISOString()}
-              className="border border-x-amber-200 rounded p-2 bg-transparent relative flex flex-col items-end 2"
+              aria-label={moonPhaseTitles[moonPhaseKey]}
+              style={{
+                backgroundImage: `url(${moonPhaseImage})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
             >
-              <div className="text-sm font-semibold mb-2 text-white">
+              <div className="xs:h-12 xs:w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 flex px-1 sm:px-2 items-center justify-center">
                 {date.getDate()} {/* Affichage du jour du mois */}
-              </div>
-              <div
-                className="ml-auto w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 flex self-end px-1 sm:px-2"
-                title={moonPhaseTitle}
-              >
-                <img
-                  src={moonPhaseImage}
-                  alt={moonPhaseTitle}
-                  className="w-full h-full object-contain"
-                />
               </div>
             </div>
           );
@@ -157,4 +150,4 @@ const MoonPhaseCalendar = () => {
   );
 };
 
-export default MoonPhaseCalendar;
+export default MonthView;

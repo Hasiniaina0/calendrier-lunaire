@@ -17,9 +17,9 @@ const Menu = () => {
   }, [location.pathname]);
 
   return (
-    <div className="pt-16">
-      <nav className="transition-all duration-300 ease-in-out bg-teal-800/80 backdrop-blur-md fixed top-0 left-0 z-50 w-full shadow-xl">
-        <div className="container mx-auto px-12 py-3 flex items-center justify-center">
+    <div className="">
+      <nav className="transition-all duration-300 ease-in-out  backdrop-blur-md top-0 left-0 z-50 w-full shadow-xl">
+        <div className="container mx-auto py-8 flex items-center justify-center">
           <div className="flex space-x-1">
             {/* Lien Jour */}
             <Link

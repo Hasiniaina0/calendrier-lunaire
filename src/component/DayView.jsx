@@ -8,7 +8,7 @@ function DayView({ imageUrl, title }) {
         src={imageUrl}
         alt={title}
         placeholderSrc="Phase de la lune"
-        className="rounded-full border-spacing-52 border-8 border-emerald-950 w-96 h-96   "
+        className="rounded-full border-spacing-52 border-8 border-emerald-950 w-96 h-96 xs:h-80 xs:w-80 sm:h-90 sm:w-90 md:h-96 md:w-96   "
       />
 
       <h1 className=" mt-10 text-4xl font-semibold text-yellow-200 text-center opacity-50">

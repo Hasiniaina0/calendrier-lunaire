@@ -1,12 +1,12 @@
 import Menu from "../component/Menu";
-import MoonPhaseCalendar from "../component/MoonPhaseCalendar";
+import MonthView from "../component/MonthView";
 
 function MonthPage() {
   return (
     <div>
       <Menu />
-      <div className="flex flex-col items-center justitfy-center text-white ">
-        <MoonPhaseCalendar />
+      <div className="flex flex-col items-center justitfy-center text-white mt-2">
+        <MonthView />
       </div>
     </div>
   );
