@@ -13,7 +13,7 @@ const DateSelectorView = ({ selectedDate, handleDateChange }) => {
   };
 
   return (
-    <div className="flex gap-2 ml-20">
+    <div className="flex gap-2">
       <svg
         onClick={handleIconClick}
         aria-label="Calendar icon"
@@ -29,7 +29,7 @@ const DateSelectorView = ({ selectedDate, handleDateChange }) => {
         ref={datePickerRef}
         selected={selectedDate}
         onChange={handleDateChange}
-        className="bg-transparent"
+        className="bg-transparent w-24"
         dateFormat="dd/MM/yyyy"
         calendarClassName="bg-gray-800 rounded-lg shadow-xl"
         monthClassName="text-center text-lg font-semibold text-indigo-400"
