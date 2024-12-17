@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/calendrier-lunaire/static/css/main.56592f1d.css",
-    "main.js": "/calendrier-lunaire/static/js/main.8fc735bc.js",
+    "main.js": "/calendrier-lunaire/static/js/main.6f61944e.js",
     "static/js/453.dbd4f9e0.chunk.js": "/calendrier-lunaire/static/js/453.dbd4f9e0.chunk.js",
     "static/media/full-moon.png": "/calendrier-lunaire/static/media/full-moon.c28a4104c0638aef0c2e.png",
     "static/media/waxing-gibbous.png": "/calendrier-lunaire/static/media/waxing-gibbous.fc82d1befd3c563b8fd3.png",
@@ -19,11 +19,11 @@
     "static/media/wan-gibbous.png": "/calendrier-lunaire/static/media/wan-gibbous.831c6f33c933fa03a649.png",
     "index.html": "/calendrier-lunaire/index.html",
     "main.56592f1d.css.map": "/calendrier-lunaire/static/css/main.56592f1d.css.map",
-    "main.8fc735bc.js.map": "/calendrier-lunaire/static/js/main.8fc735bc.js.map",
+    "main.6f61944e.js.map": "/calendrier-lunaire/static/js/main.6f61944e.js.map",
     "453.dbd4f9e0.chunk.js.map": "/calendrier-lunaire/static/js/453.dbd4f9e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56592f1d.css",
-    "static/js/main.8fc735bc.js"
+    "static/js/main.6f61944e.js"
   ]
 }

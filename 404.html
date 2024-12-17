@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirection...</title>
     <script>
-      // Rediriger vers la bonne route en cas d'erreur 404
-      const redirectTo = window.location.pathname.replace('/calendrier-lunaire', '');
-      window.location.replace('/calendrier-lunaire' + redirectTo);
+      var pathname = window.location.pathname;
+      var newPathname = pathname.replace('/calendrier-lunaire', '');
+      window.location.href = '/calendrier-lunaire/#' + newPathname;
     </script>
   </head>
   <body>
