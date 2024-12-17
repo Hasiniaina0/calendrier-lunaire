@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/calendrier-lunaire/static/css/main.b1822085.css",
-    "main.js": "/calendrier-lunaire/static/js/main.88706d12.js",
-    "static/js/453.dbd4f9e0.chunk.js": "/calendrier-lunaire/static/js/453.dbd4f9e0.chunk.js",
-    "static/media/full-moon.png": "/calendrier-lunaire/static/media/full-moon.c28a4104c0638aef0c2e.png",
-    "static/media/waxing-gibbous.png": "/calendrier-lunaire/static/media/waxing-gibbous.fc82d1befd3c563b8fd3.png",
-    "static/media/last-quarter.png": "/calendrier-lunaire/static/media/last-quarter.a66a6d7fe807749702c7.png",
-    "static/media/first-quarter.png": "/calendrier-lunaire/static/media/first-quarter.ea18c0163ff1c4c9b07a.png",
-    "static/media/waning-gibbous.png": "/calendrier-lunaire/static/media/waning-gibbous.fa4dd24d2fbb5f2e86c5.png",
-    "static/media/waning-crescent.png": "/calendrier-lunaire/static/media/waning-crescent.377b7c12b02bba962432.png",
-    "static/media/waxing-crescent.png": "/calendrier-lunaire/static/media/waxing-crescent.4c4fcd3ddf7263b0a01d.png",
-    "static/media/fond.jpg": "/calendrier-lunaire/static/media/fond.33f012c8be7965216c0c.jpg",
-    "static/media/new-moon.png": "/calendrier-lunaire/static/media/new-moon.84d12742b31bc4722c31.png",
-    "static/media/f-moon.png": "/calendrier-lunaire/static/media/f-moon.1b029fae430797577189.png",
-    "static/media/wax-gibbous.png": "/calendrier-lunaire/static/media/wax-gibbous.281024a9b7238f6e64f2.png",
-    "static/media/last-quart.png": "/calendrier-lunaire/static/media/last-quart.f601790170d37599f2f4.png",
-    "static/media/f-quarter.png": "/calendrier-lunaire/static/media/f-quarter.1b8ba90012298861dd94.png",
-    "static/media/wan-gibbous.png": "/calendrier-lunaire/static/media/wan-gibbous.831c6f33c933fa03a649.png",
-    "index.html": "/calendrier-lunaire/index.html",
-    "main.b1822085.css.map": "/calendrier-lunaire/static/css/main.b1822085.css.map",
-    "main.88706d12.js.map": "/calendrier-lunaire/static/js/main.88706d12.js.map",
-    "453.dbd4f9e0.chunk.js.map": "/calendrier-lunaire/static/js/453.dbd4f9e0.chunk.js.map"
+    "main.css": "./static/css/main.b1822085.css",
+    "main.js": "./static/js/main.df3e81da.js",
+    "static/js/453.dbd4f9e0.chunk.js": "./static/js/453.dbd4f9e0.chunk.js",
+    "static/media/full-moon.png": "./static/media/full-moon.c28a4104c0638aef0c2e.png",
+    "static/media/waxing-gibbous.png": "./static/media/waxing-gibbous.fc82d1befd3c563b8fd3.png",
+    "static/media/last-quarter.png": "./static/media/last-quarter.a66a6d7fe807749702c7.png",
+    "static/media/first-quarter.png": "./static/media/first-quarter.ea18c0163ff1c4c9b07a.png",
+    "static/media/waning-gibbous.png": "./static/media/waning-gibbous.fa4dd24d2fbb5f2e86c5.png",
+    "static/media/waning-crescent.png": "./static/media/waning-crescent.377b7c12b02bba962432.png",
+    "static/media/waxing-crescent.png": "./static/media/waxing-crescent.4c4fcd3ddf7263b0a01d.png",
+    "static/media/fond.jpg": "./static/media/fond.33f012c8be7965216c0c.jpg",
+    "static/media/new-moon.png": "./static/media/new-moon.84d12742b31bc4722c31.png",
+    "static/media/f-moon.png": "./static/media/f-moon.1b029fae430797577189.png",
+    "static/media/wax-gibbous.png": "./static/media/wax-gibbous.281024a9b7238f6e64f2.png",
+    "static/media/last-quart.png": "./static/media/last-quart.f601790170d37599f2f4.png",
+    "static/media/f-quarter.png": "./static/media/f-quarter.1b8ba90012298861dd94.png",
+    "static/media/wan-gibbous.png": "./static/media/wan-gibbous.831c6f33c933fa03a649.png",
+    "index.html": "./index.html",
+    "main.b1822085.css.map": "./static/css/main.b1822085.css.map",
+    "main.df3e81da.js.map": "./static/js/main.df3e81da.js.map",
+    "453.dbd4f9e0.chunk.js.map": "./static/js/453.dbd4f9e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1822085.css",
-    "static/js/main.88706d12.js"
+    "static/js/main.df3e81da.js"
   ]
 }
