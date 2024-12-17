@@ -1,0 +1,54 @@
+/* Fond général et bordures */
+.custom-calendar {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.custom-calendar .react-calendar__navigation {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.custom-calendar .react-calendar__navigation button {
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Case du calendrier */
+.custom-calendar .react-calendar__tile {
+  background-color: #3b3b3b;
+  color: #f3f3f3;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Case survolée */
+.custom-calendar .react-calendar__tile:hover {
+  background-color: #6a0dad;
+  color: white;
+}
+
+/* Case active (date sélectionnée) */
+.custom-calendar .react-calendar__tile--active {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+/* Weekdays (jours de la semaine) */
+.custom-calendar .react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Mois */
+.custom-calendar .react-calendar__navigation button:enabled:hover {
+  background-color: #444;
+  color: white;
+}

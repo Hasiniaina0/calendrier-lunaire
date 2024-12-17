@@ -53,8 +53,8 @@ function HomePage() {
   return (
     <div>
       <Menu />
-      <div className="flex flex-col items-center justitfy-center text-white ">
-        <div className="relative flex justify-center items-center ml-20">
+      <div className="flex flex-col items-center justitfy-center text-white mt-2">
+        <div className="relative flex justify-center items-center">
           <DateSelectorView
             selectedDate={selectedDate}
             handleDateChange={handleDateChange}

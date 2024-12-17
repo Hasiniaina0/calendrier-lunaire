@@ -18,7 +18,7 @@ function App() {
         style={{ backgroundImage: `url(${fondImage})` }}
       >
         {/* Contenu principal avec les routes */}
-        <div className="flex-grow flex items-center justify-center">
+        <div className="flex-grow flex justify-center">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/jour" element={<HomePage />} />
