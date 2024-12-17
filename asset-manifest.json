@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/calendrier-lunaire/static/css/main.035258b1.css",
-    "main.js": "/calendrier-lunaire/static/js/main.d283f466.js",
+    "main.css": "/calendrier-lunaire/static/css/main.aef89a8a.css",
+    "main.js": "/calendrier-lunaire/static/js/main.76e614cf.js",
     "static/js/453.dbd4f9e0.chunk.js": "/calendrier-lunaire/static/js/453.dbd4f9e0.chunk.js",
     "static/media/full-moon.png": "/calendrier-lunaire/static/media/full-moon.c28a4104c0638aef0c2e.png",
     "static/media/waxing-gibbous.png": "/calendrier-lunaire/static/media/waxing-gibbous.fc82d1befd3c563b8fd3.png",
@@ -12,13 +12,18 @@
     "static/media/waxing-crescent.png": "/calendrier-lunaire/static/media/waxing-crescent.4c4fcd3ddf7263b0a01d.png",
     "static/media/fond.jpg": "/calendrier-lunaire/static/media/fond.33f012c8be7965216c0c.jpg",
     "static/media/new-moon.png": "/calendrier-lunaire/static/media/new-moon.84d12742b31bc4722c31.png",
+    "static/media/f-moon.png": "/calendrier-lunaire/static/media/f-moon.1b029fae430797577189.png",
+    "static/media/wax-gibbous.png": "/calendrier-lunaire/static/media/wax-gibbous.281024a9b7238f6e64f2.png",
+    "static/media/last-quart.png": "/calendrier-lunaire/static/media/last-quart.f601790170d37599f2f4.png",
+    "static/media/f-quarter.png": "/calendrier-lunaire/static/media/f-quarter.1b8ba90012298861dd94.png",
+    "static/media/wan-gibbous.png": "/calendrier-lunaire/static/media/wan-gibbous.831c6f33c933fa03a649.png",
     "index.html": "/calendrier-lunaire/index.html",
-    "main.035258b1.css.map": "/calendrier-lunaire/static/css/main.035258b1.css.map",
-    "main.d283f466.js.map": "/calendrier-lunaire/static/js/main.d283f466.js.map",
+    "main.aef89a8a.css.map": "/calendrier-lunaire/static/css/main.aef89a8a.css.map",
+    "main.76e614cf.js.map": "/calendrier-lunaire/static/js/main.76e614cf.js.map",
     "453.dbd4f9e0.chunk.js.map": "/calendrier-lunaire/static/js/453.dbd4f9e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.035258b1.css",
-    "static/js/main.d283f466.js"
+    "static/css/main.aef89a8a.css",
+    "static/js/main.76e614cf.js"
   ]
 }
