@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
   Navigate,
-  HashRouter,
+  BrowserRouter,
 } from "react-router-dom"; // pour gérer les routes dans une application react
 import HomePage from "./page/HomePage";
 import MonthPage from "./page/MonthPage";
@@ -12,7 +12,7 @@ import fondImage from "./asset/fond.jpg";
 
 function App() {
   return (
-    <HashRouter basename="/calendrier-lunaire">
+    <BrowserRouter>
       <div
         className="App min-h-screen flex flex-col"
         style={{ backgroundImage: `url(${fondImage})` }}
@@ -28,7 +28,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
